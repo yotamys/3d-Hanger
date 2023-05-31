@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="240">
+  <title>3D Printable Hanger Kit</title>
+  <style>
+    /* Inline CSS */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    h1 {
+      margin: 0;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    .product-gallery {
+      position: relative;
+      width: 100%;
+      margin-bottom: 30px;
+      overflow: hidden;
+    }
+    
+    .product-gallery img {
+      width: 100%;
+      display: none;
+    }
+    
+    .product-gallery img.active {
+      display: block;
+    }
+    
+    .prev,
+    .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 24px;
+      color: #333;
+      background-color: #fff;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    .prev:hover,
+    .next:hover {
+      background-color: #eee;
+    }
+    
+    .prev {
+      left: 10px;
+    }
+    
+    .next {
+      right: 10px;
+    }
+    
+    .product-description {
+      margin-bottom: 30px;
+      text-align: justify;
+    }
+    
+    .buy-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+    
+    .buy-button:hover {
+      background-color: #666;
+    }
+    
+    .price-tag {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+.product-box {
+  display: none;
+  padding: 20px;
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
+}
+
+.product-box.active {
+  display: block;
+}
+
+.product-box img {
+  max-width: 200px;
+  margin-bottom: 10px;
+}
+
+.product-box .download-button {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.product-box .download-button:hover {
+  background-color: #666;
+}
+
+.download-all-button {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.download-all-button:hover {
+  background-color: #666;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>HangUp! - 3D Printable And Personalized Hanger Kit</h1>
+  </header>
+  <div class="container">
+    <div class="product-gallery">
+      <img src="hanger1.jpg" alt="Hanger Image 1" class="active">
+      <img src="hanger2.jpg" alt="Hanger Image 2">
+      <img src="hanger3.jpg" alt="Hanger Image 3">
+      <button class="prev" onclick="prevImage()">&lt;</button>
+      <button class="next" onclick="nextImage()">&gt;</button>
+    </div>
+<div class="product-description">
+      <p>A 3d print hanger kit. You will get access to all the different styles, which you can print create the hanger that will fit you the most. (All the files are in STL format)
+</p>
+      <div class="price-tag">$20</div>
+      <a href="#" class="buy-button">Buy Now</a>
+    </div>
+<div id="product-box" class="product-box">
+  <h2>Your files</h2>
+  <div class="product-images">
+    <div class="product-image">
+      <img src="part1.jpg" alt="Hanger Image 1">
+      <a href="part1.jpg" class="download-button" download>Download</a>
+    </div>
+    <div class="product-image">
+      <img src="part2.jpg" alt="Hanger Image 2">
+      <a href="part2.jpg" class="download-button" download>Download</a>
+    </div>
+    <div class="product-image">
+      <img src="part3.jpg" alt="Hanger Image 3">
+      <a href="part3.jpg" class="download-button" download>Download</a>
+    </div>
+    <div class="product-image">
+      <img src="part4.jpg" alt="Hanger Image 4">
+      <a href="part4.jpg" class="download-button" download>Download</a>
+    </div>
+    <div class="product-image">
+      <img src="part5.jpg" alt="Hanger Image 5">
+      <a href="part5.jpg" class="download-button" download>Download</a>
+    </div>
+    <div class="product-image">
+      <img src="part6.jpg" alt="Hanger Image 6">
+      <a href="part6.jpg" class="download-button" download>Download</a>
+    </div>
+    <div class="product-image">
+      <img src="part7.jpg" alt="Hanger Image 7">
+      <a href="part7.jpg" class="download-button" download>Download</a>
+    </div>
+    <div class="product-image">
+      <img src="part8.jpg" alt="Hanger Image 7">
+      <a href="part8.jpg" class="download-button" download>Download</a>
+    </div>
+    <div class="product-image">
+      <img src="part9.jpg" alt="Hanger Image 7">
+      <a href="part9.jpg" class="download-button" download>Download</a>
+    </div>
+    <div class="product-image">
+      <img src="part10.jpg" alt="Hanger Image 7">
+      <a href="part10.jpg" class="download-button" download>Download</a>
+    </div>
+  </div>
+  <a href="#" class="download-all-button">Download All</a>
+</div>
+  </div>
+  <footer>
+    &copy; 2023 3D Printable Hanger Kit.
+  </footer>
+  <script>
+// JavaScript for showing the product box
+var buyButton = document.querySelector('.buy-button');
+var productBox = document.querySelector('#product-box');
+
+buyButton.addEventListener('click', function() {
+  productBox.classList.add('active');
+});
+    // JavaScript for image gallery navigation
+    var images = document.querySelectorAll('.product-gallery img');
+    var prevButton = document.querySelector('.prev');
+    var nextButton = document.querySelector('.next');
+    var currentIndex = 0;
+
+    function showImage(index) {
+      images.forEach(function(image) {
+        image.classList.remove('active');
+      });
+      images[index].classList.add('active');
+    }
+
+    function prevImage() {
+      currentIndex--;
+      if (currentIndex < 0) {
+        currentIndex = images.length - 1;
+      }
+      showImage(currentIndex);
+    }
+
+    function nextImage() {
+      currentIndex++;
+      if (currentIndex >= images.length) {
+        currentIndex = 0;
+      }
+      showImage(currentIndex);
+    }
+  </script>
+</body>
+</html>
